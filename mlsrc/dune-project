@@ -1,1 +1,27 @@
 (lang dune 3.0)
+
+(name orn_sample_camlbundle)
+(version ~dev)
+
+(license MIT)
+(maintainers "Haochen Kotoi-Xie <haochenx@acm.org>")
+(authors "Haochen Kotoi-Xie")
+
+(source
+ (github haochenx/ocaml_react_native_sample))
+(bug_reports "https://github.com/haochenx/ocaml_react_native_sample/issues")
+
+(generate_opam_files true)
+(package
+ (name orn_sample_camlbundle)
+ (synopsis "KXC maintained common utilities")
+ (description "Common OCaml utilities maintained by Kotoi-Xie Consultancy")
+ (depends
+  yojson
+  ppx_yojson_conv
+
+  js_of_ocaml
+  js_of_ocaml-ppx
+
+  (dune (and :build (>= 3.0)))
+  (ocaml (>= 4.13.1))))
