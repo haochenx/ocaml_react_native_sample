@@ -1,0 +1,10 @@
+(rule
+ (targets camlentry.bc.js)
+ (mode (promote (until-clean)))
+ (deps ../js/camlentry.bc.js)
+ (action (with-stdout-to %{targets}
+          (pipe-outputs
+            (run cat %{deps})
+             (run sed "s/require(\"fs\")/null/g")
+           )
+          )))

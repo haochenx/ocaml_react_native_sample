@@ -1,0 +1,6 @@
+[submodule "mlsrc/vendors/kxclib"]
+	path = mlsrc/vendors/kxclib
+	url = git@github.com:kxcteam/kxclib-ocaml.git
+[submodule "mlsrc/vendors/prr"]
+	path = mlsrc/vendors/prr
+	url = git@github.com:kxcdev/prr.git

@@ -1,0 +1,11 @@
+*.exe
+.merlin
+_build/
+.idea
+*.pyc
+_opam
+
+.DS_Store
+*~
+*#*#
+.#*

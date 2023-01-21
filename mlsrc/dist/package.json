@@ -1,0 +1,5 @@
+{
+  "name": "orn_sample-camlbundle",
+  "private": true,
+  "main": "./camlentry.bc.js"
+}

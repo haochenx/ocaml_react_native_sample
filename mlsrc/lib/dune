@@ -1,0 +1,6 @@
+(library
+ (name app_lib)
+ (libraries kxclib)
+ (preprocess (pps ppx_yojson_conv))
+ (flags (:standard
+          -open Kxclib)))

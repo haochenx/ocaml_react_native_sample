@@ -1,0 +1,17 @@
+(executable
+ (name camlentry)
+ (libraries app_lib kxclib prr yojson)
+ (preprocess (pps js_of_ocaml-ppx ppx_yojson_conv))
+ (modes byte)
+ (flags (:standard
+          -open Kxclib)))
+
+(rule
+  (targets camlentry.bc.js)
+  (action (run %{bin:js_of_ocaml}
+            --pretty
+            ;; it seems that webpack cannot figure out jsoo source-map after all,
+            ;; so disable to save compilation time and generate source code size
+            --no-source-map
+            --target-env browser
+            %{dep:camlentry.bc} -o %{targets})))
